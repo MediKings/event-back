@@ -21,6 +21,9 @@ app.use('/api', authRoute)
 app.use('/api', eventRoute)
 app.use('/api/upload', uploadRoute)
 app.use('/api', sendEMailRoute)
+app.use('/', (req, res) => {
+    res.send("Server is running...")
+})
 
 app.listen(port, () => {
     console.log('App is running...')
